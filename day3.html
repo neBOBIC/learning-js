@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p class="paragraf">d</p>
+    <p class="paragraf"></p>
+    <p class="paragraf"></p>
+    <p class="paragraf"></p>
+    <p class="paragraf"></p>
+
+    <script>
+        let fructe = ["Mar", "Banana", "Piersic", "Pere", "Cirese"];
+        console.log(fructe[0]);
+        console.log(fructe[fructe.length - 1]);
+
+        let numere = [3, 30, 6, 7, 12, 6];
+        numere.push(6);
+        numere.shift();
+
+        console.log(numere);
+
+        let orase = ["Chisinau", "Balti", "Paris", "Dallas", "Melbourne", "Helsinki"];
+
+        for (let oras of orase) {
+            console.log(oras);
+        }
+
+        orase.forEach(oras => console.log(oras));
+
+        let numere2 = [3, 30, 6, 7, 12, 6];
+        let mari = numere2.filter(x => x > 10);
+        mari.forEach(numar => console.log(numar));
+
+        const par = document.querySelectorAll(".paragraf");
+        const pararray = Array.from(par);
+        pararray.forEach((arr, index) => {
+            arr.innerText = `paragraf ${index + 1}`});
+        console.log(pararray.length);
+
+        let text = prompt("Introdu un text");
+        console.log(text.toUpperCase());
+        console.log(text.toLowerCase());
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="info">Acesta este un div!</div>
+    <p class="text">Initial</p>
+    <p class="last">Salut</p>
+    <p class="last">Javascript</p>
+    <p class="last">Programare</p>
+
+    <script>
+        let nume = "Adrian";
+        console.log("Salut "+ nume + "!");
+
+        let a = 10;
+        let b = 40;
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
+
+        let c = 46;
+        let s = "noroc";
+        let boo = true;
+
+        console.log(typeof(c));
+        console.log(typeof(s));
+        console.log(typeof(boo));
+
+        let nume2 = prompt("Introdu numele:");
+        let prenume = prompt("Introdu prenumele:");
+        console.log("Salut " + nume2 + " " + prenume + "!");
+
+        let varsta = prompt("Introdu varsta:");
+        if (varsta >= 18 )
+    {
+        alert("Ai acces");
+    }
+    else {
+        alert("Acces interzis!");
+    }
+
+    let element = document.getElementById("info");
+    console.log(element.innerHTML);
+
+    let paragraf = document.querySelectorAll(".text");
+    paragraf[0].innerHTML = "salutare";
+
+    let produs = "Lapte";
+    let pret = 20;
+    let cantitate = 5;
+    console.log("Pretul total este: " + pret * cantitate);
+
+    let array = [3, 7, 8, -3, 9];
+    console.log(array[0]);
+    console.log(array[4]);
+
+    let ultimul = document.querySelectorAll(".last");
+    console.log(ultimul[0].innerHTML + " " + ultimul[2].innerHTML + " " + ultimul[1].innerHTML);
+    </script>
+</body>
+</html>

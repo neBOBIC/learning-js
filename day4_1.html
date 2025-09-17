@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: aqua;
+        }
+
+        #container{
+            display: flex;
+            gap: 2px;
+            position: relative;
+        }
+
+        .white-pedal{
+            height: 300px;
+            width: 50px;
+            background-color: white;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            position: relative;
+            z-index: 0;
+        }
+
+        .black-pedal{
+            height: 170px;
+            width: 30px;
+            background-color: black;
+            position: absolute;
+            left: 35px;
+            z-index: 1;
+        }
+    </style>
+
+    <div id="container"></div>
+
+    <script>
+        const container = document.getElementById("container");
+        const blackPattern = [1, 1, 0, 1, 1, 1, 0]; 
+
+        for(let n = 0; n < 21; n++){
+            let wpedal = document.createElement("div");
+            wpedal.className = "white-pedal";
+            container.appendChild(wpedal);
+            
+        if(blackPattern[n % blackPattern.length] === 1){
+            let bpedal = document.createElement("div");
+            bpedal.className = ("black-pedal");
+            wpedal.appendChild(bpedal);
+        }
+            
+        }
+    </script>
+</body>
+</html>

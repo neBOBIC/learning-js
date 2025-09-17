@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        #tabla{
+            display: flex;
+            gap: 20px;
+        }
+
+        .coloana{
+            background-color: aqua;
+            border: 5px solid brown;
+            padding: 10px;
+        }
+    </style>
+
+    <div id="tabla"></div>
+
+    <script>
+        const container = document.getElementById("tabla");
+
+        for(let n = 1; n < 10; n++){
+            const col = document.createElement("div");
+            col.className = "coloana";
+
+            for(let i = 0; i < 10; i++){
+                const p = document.createElement("p");
+                p.textContent = `${n} * ${i} = ${n * i}`
+                col.appendChild(p);
+            }
+
+            container.appendChild(col);
+        }
+
+    </script>
+</body>
+</html>

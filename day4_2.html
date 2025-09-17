@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .white-cube{
+            width: 50px;
+            height: 50px;
+            background-color: antiquewhite;
+        }
+
+        .black-cube{
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        const container = document.getElementById("container");
+
+
+         for(let i = 0; i < 8; i++){
+            const black = document.createElement("div");
+            black.className = "black-cube";
+            const white = document.createElement("div");
+            white.className = "whie-cube";
+
+            container.appendChild(black, white
+                
+            );
+         }
+
+         
+    </script>
+</body>
+</html>

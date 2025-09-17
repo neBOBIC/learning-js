@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="list">
+
+    </ul>
+
+    <div id="paragrafe">
+        <p>Paragraf 1</p>
+        <p>Paragraf 2</p>
+        <p>Paragraf 3</p>
+        <p>Paragraf 4</p>
+        <p>Paragraf 5</p>
+    </div>
+    
+    <script>
+        function first(x){
+            if (x % 2 === 0) {
+                return true;
+            }
+            else if (x % 2 !== 0 ){
+                return false;
+            }
+            else {
+                return 'not a number';
+            }
+        }
+
+        console.log(first(4));
+
+        let upper = text => console.log(text.toUpperCase());
+        upper("salut");
+
+        let anonim = function(a, b){
+            return a + b;
+        }
+
+        console.log(anonim(3, 4));
+
+        // for (i = 1; i <= 50; i ++) {
+        //     console.log(i);
+        // }
+
+        let ulist = document.getElementById("list");
+
+        for(i = 0; i <= 10; i++){
+            let litem = document.createElement('li');
+            litem.innerText = `${3*i}`;
+            ulist.appendChild(litem);
+        }
+
+        let par = document.querySelectorAll("#paragrafe p");
+
+        for(i = 0; i < par.length; i++)
+        {
+            if(i % 2 === 0){
+                par[i].style.background = "green";
+            }
+            else {
+                par[i].style.background = "red";
+            }
+        }
+
+        (function() {
+            console.log("Aceasta este o functie imediat invocata");
+        })();
+
+        function* dela1la5(){
+            let num = 1;
+            while(num <= 5){
+                yield num++;
+            }
+        }
+
+        const generator = dela1la5();
+        console.log(generator.next().value);
+        console.log(generator.next().value);
+        console.log(generator.next().value);
+        console.log(generator.next().value);
+        console.log(generator.next().value);
+
+        
+    </script>
+</body>
+</html>
