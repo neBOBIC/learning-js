@@ -12,15 +12,31 @@
             margin: 0px;
         }
 
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container{
+            width: 450px;
+            height: 450px;
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-columns: repeat(8, 50px);
+            gap: 0px;
+        }
+
         .white-cube{
-            width: 50px;
-            height: 50px;
+            width: 100%;
+            height: 100%;
             background-color: antiquewhite;
         }
 
         .black-cube{
-            width: 50px;
-            height: 50px;
+            width: 100%;
+            height: 100%;
             background-color: brown;
         }
     </style>
@@ -33,15 +49,18 @@
         const container = document.getElementById("container");
 
 
-         for(let i = 0; i < 8; i++){
-            const black = document.createElement("div");
-            black.className = "black-cube";
-            const white = document.createElement("div");
-            white.className = "whie-cube";
+         for(let rows = 0; rows < 8; rows++){
+            for(let column = 0; column < 8; column++){
+                let square = document.createElement('div');
+                if((column + rows) % 2 == 0){
+                    square.classList.add("white-cube");
+                }
+                else {
+                    square.classList.add("black-cube");
+                }
 
-            container.appendChild(black, white
-                
-            );
+                container.appendChild(square);
+            }
          }
 
          
