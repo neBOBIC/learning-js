@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 300px);
+            grid-template-rows: repeat(2, 200px);
+        }
+
+        #top{
+            grid-column: 1 / span 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #top p{
+            font-size: 3em;
+            font-weight: bolder;
+            word-spacing: 40px;
+        }
+
+        .left, .right{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left p{
+            padding-top: 30px;
+        }
+
+        .right p{
+            padding-top: 30px;
+        }
+
+        h1{
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Proba Adunarii</h1>
+
+    <div class="container">
+        <div id="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    
+    <script>
+        let num1 = Number(prompt("Introduceti primul numar: "));
+        let num2 =Number(prompt("Introduceti al doilea numar: "));
+
+        document.getElementById("top").innerHTML = `<p>${num1} + ${num2} = ${num1 + num2}</p>`;
+        document.querySelector('.left').innerHTML = `<p>${num2} + ${num1} = ${num1 + num2}</p>
+                                                     <p>${num1 + num2} - ${num1} = ${num1 + num2 - num1}</p>
+                                                     <p>${num1 + num2} - ${num2} = ${num1 + num2 - num2}</p>`;
+        document.querySelector('.right').innerHTML = `<p>T2 + T1 = S</p>
+                                                     <p>S - T1 = T2</p>
+                                                     <p>S - T2 = T1</p>`;
+    </script>
+</body>
+</html>
